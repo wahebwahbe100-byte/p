@@ -97,23 +97,25 @@
       min-width:0;
     }
     .brand-logo{
-      width:150px;
-      height:64px;
-      border-radius:18px;
-      display:grid;
-      place-items:center;
-      background:#ffffff;
-      box-shadow:0 12px 28px rgba(13,94,158,.18);
-      flex:0 0 150px;
-      overflow:hidden;
-      border:1px solid rgba(17,24,39,.08);
-      padding:6px 10px;
+      width:170px;
+      min-width:170px;
+      height:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:transparent;
+      box-shadow:none;
+      border:none;
+      border-radius:0;
+      padding:0;
+      overflow:visible;
     }
     .brand-logo img{
       width:100%;
-      height:100%;
+      height:auto;
       object-fit:contain;
       display:block;
+      filter:drop-shadow(0 8px 18px rgba(13,94,158,.12));
     }
     .brand-text{display:flex;flex-direction:column;line-height:1.08}
     .brand-title{
@@ -269,22 +271,42 @@
       display:none;
       width:52px;
       height:52px;
+      padding:0;
       border:none;
       border-radius:16px;
       background:rgba(13,94,158,.10);
       color:#083e69;
-      font-size:30px;
       cursor:pointer;
       transition:transform .25s ease, background .25s ease, box-shadow .25s ease;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+    }
+    .mobile-toggle span{
+      display:block;
+      width:24px;
+      height:2.5px;
+      border-radius:999px;
+      background:currentColor;
+      transition:transform .25s ease, opacity .25s ease, width .25s ease;
     }
     .mobile-toggle:hover{
       background:rgba(13,94,158,.16);
       box-shadow:0 10px 22px rgba(13,94,158,.16);
     }
     .mobile-toggle.active{
-      transform:rotate(90deg);
       background:var(--blue);
       color:#fff;
+    }
+    .mobile-toggle.active span:nth-child(1){
+      transform:translateY(7px) rotate(45deg);
+    }
+    .mobile-toggle.active span:nth-child(2){
+      opacity:0;
+    }
+    .mobile-toggle.active span:nth-child(3){
+      transform:translateY(-8px) rotate(-45deg);
     }
 
     .hero{
@@ -782,14 +804,48 @@
     }
 
     @media (max-width:780px){
-      .mobile-toggle{display:block}
+      .topbar{
+        font-size:12px;
+      }
+      header{
+        background:rgba(255,255,255,.94);
+      }
+      .container{
+        width:min(94%, var(--container));
+      }
+      .nav{
+        min-height:76px;
+        gap:12px;
+      }
+      .brand{
+        flex:1;
+        min-width:0;
+        gap:10px;
+      }
+      .brand-logo{
+        width:118px;
+        min-width:118px;
+      }
+      .brand-text{
+        min-width:0;
+      }
+      .brand-title{
+        font-size:15px;
+        white-space:normal;
+        line-height:1.05;
+      }
+      .brand-sub{
+        font-size:9px;
+        letter-spacing:.09em;
+      }
+      .mobile-toggle{display:flex}
       .nav{
         position:relative;
       }
       .nav-links{
         display:flex;
         position:absolute;
-        top:92px;
+        top:calc(100% + 10px);
         left:0;
         right:0;
         background:rgba(255,255,255,.98);
@@ -805,6 +861,9 @@
         transform:translateY(-10px);
         pointer-events:none;
         transition:opacity .28s ease, transform .28s ease, visibility .28s ease;
+        z-index:1400;
+        max-height:calc(100vh - 110px);
+        overflow:auto;
       }
       .nav-links a.link,
       .nav-links .btn{
@@ -2270,7 +2329,11 @@ footer .footer-shell{
         </div>
       </a>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <nav class="nav-links" id="navLinks">
         <a class="link" href="#start">Startseite</a>
@@ -2697,6 +2760,7 @@ footer .footer-shell{
       navLinks?.classList.remove('active');
       mobileToggle?.classList.remove('active');
       mobileToggle?.setAttribute('aria-expanded', 'false');
+      mobileToggle?.setAttribute('aria-label', 'Menü öffnen');
       closeServicesDropdown();
     }
 
@@ -2704,6 +2768,7 @@ footer .footer-shell{
       navLinks?.classList.add('active');
       mobileToggle?.classList.add('active');
       mobileToggle?.setAttribute('aria-expanded', 'true');
+      mobileToggle?.setAttribute('aria-label', 'Menü schließen');
       closeServicesDropdown();
     }
 
@@ -2860,7 +2925,7 @@ footer .footer-shell{
     });
 
     document.addEventListener('click', (event) => {
-      if (!navLinks?.contains(event.target) && !mobileToggle?.contains(event.target)) {
+      if (!document.querySelector('.nav')?.contains(event.target)) {
         closeMobileMenu();
         closeServicesDropdown();
       }
