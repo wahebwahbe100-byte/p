@@ -1114,7 +1114,7 @@
     }
     .png-grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
+      grid-template-columns:repeat(2, minmax(0, 1fr));
       gap:24px;
       max-width:980px;
       margin:0 auto;
@@ -2391,61 +2391,45 @@ footer .footer-shell{
         <h2>Unsere Leistungen</h2>
       </div>
 
+      
       <div class="png-grid">
         <div class="png-item reveal">
-          <a class="service-link-card" href="wohnungsreinigung-complete.html" aria-label="Privatumzüge öffnen">
+          <a class="service-link-card" href="glasreinigung-complete.html" aria-label="Firmenumzug öffnen">
             <div class="png-icon-wrap">
-              <img class="png-icon" src="service-1.png" alt="Privatumzüge">
+              <img class="png-icon" src="service/service-2.png" alt="Firmenumzug">
             </div>
-            <div class="png-title">Privatumzüge</div>
+            <div class="png-title">Firmenumzug</div>
           </a>
         </div>
 
         <div class="png-item reveal">
-          <a class="service-link-card" href="glasreinigung-complete.html" aria-label="Firmenumzüge öffnen">
+          <a class="service-link-card" href="wohnungsreinigung-complete.html" aria-label="Wohnungsumzug öffnen">
             <div class="png-icon-wrap">
-              <img class="png-icon" src="service-2.png" alt="Firmenumzüge">
+              <img class="png-icon" src="service/service-1.png" alt="Wohnungsumzug">
             </div>
-            <div class="png-title">Firmenumzüge</div>
+            <div class="png-title">Wohnungsumzug</div>
           </a>
         </div>
 
         <div class="png-item reveal">
-          <a class="service-link-card" href="treppenhausreinigung-complete.html" aria-label="Entrümpelungen öffnen">
+          <a class="service-link-card" href="treppenhausreinigung-complete.html" aria-label="Entrümpelung öffnen">
             <div class="png-icon-wrap">
-              <img class="png-icon" src="service-3.png" alt="Entrümpelungen">
+              <img class="png-icon" src="service/service-3.png" alt="Entrümpelung">
             </div>
-            <div class="png-title">Entrümpelungen</div>
+            <div class="png-title">Entrümpelung</div>
           </a>
         </div>
 
         <div class="png-item reveal">
-          <a class="service-link-card" href="gartenpflege-complete.html" aria-label="Haushaltsauflösungen öffnen">
+          <a class="service-link-card" href="individuelle-loesungen-complete.html" aria-label="Transport &amp; Lieferung öffnen">
             <div class="png-icon-wrap">
-              <img class="png-icon" src="service-4.png" alt="Haushaltsauflösungen">
+              <img class="png-icon" src="service/service-6.png" alt="Transport &amp; Lieferung">
             </div>
-            <div class="png-title">Haushaltsauflösungen</div>
-          </a>
-        </div>
-
-        <div class="png-item reveal">
-          <a class="service-link-card" href="bueroreinigung-complete.html" aria-label="Möbelmontage öffnen">
-            <div class="png-icon-wrap">
-              <img class="png-icon" src="service-5.png" alt="Möbelmontage">
-            </div>
-            <div class="png-title">Möbelmontage</div>
-          </a>
-        </div>
-
-        <div class="png-item reveal">
-          <a class="service-link-card" href="individuelle-loesungen-complete.html" aria-label="Transportservice öffnen">
-            <div class="png-icon-wrap">
-              <img class="png-icon" src="service-6.png" alt="Transportservice">
-            </div>
-            <div class="png-title">Transportservice</div>
+            <div class="png-title">Transport &amp; Lieferung</div>
           </a>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -2515,7 +2499,7 @@ footer .footer-shell{
         <div class="contact-shell reveal">
           <div class="contact-card left">
             <h3>Wir freuen uns auf Ihre Anfrage</h3>
-            <p>Ob Reinigung, Facility Management, Treppenhaus, Glasflächen oder Haushaltsauflösungen – wir beraten Sie persönlich und erstellen ein passendes Angebot.</p>
+            <p>Ob Firmenumzug, Wohnungsumzug, Entrümpelung oder Transport & Lieferung – wir beraten Sie persönlich und erstellen ein passendes Angebot.</p>
             <div class="contact-list">
               <div class="contact-item">
                 <strong>Telefon</strong>
@@ -2555,12 +2539,10 @@ footer .footer-shell{
                   <label for="service">Leistung</label>
                   <select id="service" name="Leistung" required>
                     <option value="" selected disabled>Bitte auswählen</option>
-                    <option>Möbelmontage</option>
-                    <option>Firmenumzüge</option>
-                    <option>Entrümpelungen</option>
-                    <option>Facility Management</option>
-                    <option>Haushaltsauflösungen</option>
-                    <option>Individuelle Anfrage</option>
+                    <option>Firmenumzug</option>
+                    <option>Wohnungsumzug</option>
+                    <option>Entrümpelung</option>
+                    <option>Transport &amp; Lieferung</option>
                   </select>
                 </div>
                 <div class="field">
@@ -2568,10 +2550,9 @@ footer .footer-shell{
                   <select id="interval" name="Turnus">
                     <option value="" selected disabled>Bitte auswählen</option>
                     <option>Einmalig</option>
-                    <option>Wöchentlich</option>
-                    <option>14-tägig</option>
-                    <option>Monatlich</option>
-                    <option>Transportservice</option>
+                    <option>Nach Vereinbarung</option>
+                    <option>Dringender Termin</option>
+                    <option>Besichtigung vor Ort</option>
                   </select>
                 </div>
                 <div class="field">
@@ -2628,7 +2609,7 @@ footer .footer-shell{
           </div>
         </div>
         <div class="modal-hero-image">
-          <img id="modalImage" src="service-1.png" alt="Leistung Bild">
+          <img id="modalImage" src="service/service-1.png" alt="Leistung Bild">
         </div>
       </div>
       <div class="modal-body">
@@ -2770,88 +2751,60 @@ footer .footer-shell{
 
     const serviceData = {
       'wohnungsreinigung': {
-        badge: 'Wohnungsservice',
-        title: 'Privatumzüge',
-        lead: 'Saubere Wohnräume, flexible Termine und ein Ergebnis, das sofort auffällt – für private Haushalte, Ferienwohnungen und Übergaben.',
-        image: 'service-1.png',
+        badge: 'Privat & Familie',
+        title: 'Wohnungsumzug',
+        lead: 'Ob kleine Wohnung oder großes Familienhaus – wir übernehmen Ihren Umzug strukturiert, sorgfältig und termintreu.',
+        image: 'service/service-1.png',
         tasks: [
-          'Staubsaugen und Wischen aller Böden',
-          'Reinigung von Küche, Bad und WC',
-          'Staubentfernung auf Möbeln und Oberflächen',
-          'Pflege von Türen, Lichtschaltern und Griffen',
-          'Individuelle Zusatzleistungen nach Bedarf'
+          'Kartons, Möbel und Hausrat sicher transportieren',
+          'Be- und Entladen mit organisiertem Ablauf',
+          'Schonender Umgang mit empfindlichen Möbeln',
+          'Hilfe beim Tragen und Platzieren vor Ort',
+          'Saubere und verlässliche Durchführung am Umzugstag'
         ],
-        description: 'Wir stimmen die Reinigung auf Ihren Alltag ab – einmalig, wöchentlich, 14-tägig oder monatlich. Vor dem Einsatz klären wir den Umfang, besondere Wünsche und sensible Bereiche. So erhalten Sie einen planbaren, zuverlässigen und diskreten Service.'
+        description: 'Wir planen Ihren Wohnungsumzug passend zu Ihrer Wohnsituation und Ihrem Zeitfenster. So läuft der Wechsel in das neue Zuhause ruhig, übersichtlich und ohne unnötigen Stress ab.'
       },
       'glasreinigung': {
-        badge: 'Klare Sicht',
-        title: 'Firmenumzüge',
-        lead: 'Glasflächen, Fenster und Rahmen werden streifenfrei gereinigt – für private und gewerbliche Objekte mit repräsentativem Eindruck.',
-        image: 'service-2.png',
+        badge: 'Büro & Gewerbe',
+        title: 'Firmenumzug',
+        lead: 'Wir verlegen Arbeitsplätze, Büros und kleinere Gewerbeflächen effizient, damit Ihr Betrieb schnell wieder einsatzbereit ist.',
+        image: 'service/service-2.png',
         tasks: [
-          'Fenster innen und außen reinigen',
-          'Rahmen, Falze und Fensterbänke säubern',
-          'Pflege von Glasfronten und Türen',
-          'Streifenfreie Nachbearbeitung',
-          'Regelmäßige oder saisonale Einsätze'
+          'Strukturierter Transport von Büroeinrichtung',
+          'Zuverlässige Planung für feste Umzugstermine',
+          'Sorgfältiger Umgang mit Technik und Mobiliar',
+          'Koordinierter Ablauf für kurze Ausfallzeiten',
+          'Saubere Übergabe am Zielort'
         ],
-        description: 'Ob Schaufenster, Bürofenster oder private Glasflächen: Wir arbeiten sorgfältig, materialschonend und mit klarem Ablauf. Der Service eignet sich für einzelne Aufträge ebenso wie für regelmäßige Intervalle.'
+        description: 'Ein Firmenumzug braucht Tempo, Übersicht und Verlässlichkeit. Wir stimmen den Ablauf mit Ihnen ab und sorgen dafür, dass Ihr Standortwechsel sauber organisiert durchgeführt wird.'
       },
       'treppenhausreinigung': {
-        badge: 'Gepflegte Eingänge',
-        title: 'Entrümpelungen',
-        lead: 'Saubere Treppenhäuser schaffen einen guten ersten Eindruck und erhöhen das Wohlgefühl für Bewohner, Besucher und Mitarbeitende.',
-        image: 'service-3.png',
+        badge: 'Schnell & Gründlich',
+        title: 'Entrümpelung',
+        lead: 'Wir räumen Wohnungen, Keller, Dachböden und einzelne Räume schnell, diskret und fachgerecht für Sie frei.',
+        image: 'service/service-3.png',
         tasks: [
-          'Böden kehren, saugen und wischen',
-          'Geländer, Handläufe und Briefkastenanlagen reinigen',
-          'Eingangsbereich und Klingelanlagen pflegen',
-          'Spinnweben und oberflächlichen Schmutz entfernen',
-          'Regelmäßiger Turnus nach Objektgröße'
+          'Entrümpelung von Keller, Garage und Dachboden',
+          'Räumung von Wohnungen und einzelnen Zimmern',
+          'Saubere, besenreine Übergabe nach Absprache',
+          'Diskrete und respektvolle Arbeitsweise',
+          'Unterstützung auch bei kurzfristigen Terminen'
         ],
-        description: 'Wir übernehmen die laufende Pflege von Mehrfamilienhäusern, Praxen und Geschäftsobjekten. Der Turnus wird an Frequenz, Jahreszeit und Nutzung angepasst, damit das Gebäude dauerhaft gepflegt wirkt.'
-      },
-      'gartenpflege': {
-        badge: 'Außenbereiche',
-        title: 'Haushaltsauflösungen',
-        lead: 'Gepflegte Grünflächen, saubere Außenbereiche und zuverlässige Unterstützung rund um Grundstück und Garten.',
-        image: 'service-4.png',
-        tasks: [
-          'Rasen mähen und Kanten nacharbeiten',
-          'Laub, Unkraut und Schnittgut entfernen',
-          'Hecken und Sträucher pflegen',
-          'Wege und Außenflächen sauber halten',
-          'Saisonale Einsätze und laufende Betreuung'
-        ],
-        description: 'Wir kümmern uns um private und gewerbliche Außenanlagen mit Blick auf ein ordentliches, gepflegtes Gesamtbild. Je nach Wunsch erfolgt die Pflege regelmäßig oder zu einzelnen Terminen.'
-      },
-      'bueroreinigung': {
-        badge: 'Business Clean',
-        title: 'Möbelmontage',
-        lead: 'Ein sauberes Büro unterstützt konzentriertes Arbeiten und sorgt für einen professionellen Eindruck bei Team und Kunden.',
-        image: 'service-5.png',
-        tasks: [
-          'Arbeitsplätze und Oberflächen reinigen',
-          'Böden, Besprechungsräume und Gemeinschaftsflächen pflegen',
-          'Küchenbereiche und Sanitärzonen säubern',
-          'Mülleimer leeren und Verbrauchsbereiche aufräumen',
-          'Reinigung vor oder nach den Bürozeiten'
-        ],
-        description: 'Wir planen den Einsatz so, dass Ihr Tagesgeschäft möglichst nicht gestört wird. Der Leistungsumfang lässt sich auf kleine Büros, Praxen oder größere Verwaltungsflächen anpassen.'
+        description: 'Bei einer Entrümpelung zählt vor allem ein klarer Ablauf. Wir arbeiten zügig, zuverlässig und mit dem Blick dafür, dass am Ende alles ordentlich und frei hinterlassen wird.'
       },
       'individuelle-loesungen': {
-        badge: 'Flexibles Angebot',
-        title: 'Transportservice',
-        lead: 'Nicht jedes Objekt passt in ein Standardpaket. Deshalb erstellen wir Lösungen, die genau zu Ihrem Bedarf, Ihrem Zeitplan und Ihrem Budget passen.',
-        image: 'service-6.png',
+        badge: 'Flexibel unterwegs',
+        title: 'Transport & Lieferung',
+        lead: 'Wir transportieren Möbel, einzelne Gegenstände oder Lieferungen sicher von A nach B – unkompliziert und termingerecht.',
+        image: 'service/service-6.png',
         tasks: [
-          'Kombination mehrerer Leistungen',
-          'Einmalige Sonderreinigung oder feste Betreuung',
-          'Flexible Einsatzzeiten und individuelle Absprachen',
-          'Anpassung an Objektgröße und Nutzungsart',
-          'Persönliche Beratung vor Angebotsabgabe'
+          'Transport einzelner Möbelstücke',
+          'Lieferung sperriger oder schwerer Gegenstände',
+          'Flexible Termine nach Absprache',
+          'Sicheres Verladen und geschützter Transport',
+          'Zuverlässige Zustellung am gewünschten Ort'
         ],
-        description: 'Sie sagen uns, was Sie brauchen – wir entwerfen daraus eine passende Leistung. So bekommen Sie keine starre Standardlösung, sondern ein Angebot, das wirklich zu Ihrem Objekt und Ablauf passt.'
+        description: 'Nicht jeder Auftrag ist ein kompletter Umzug. Für Einzeltransporte und Lieferungen bieten wir eine praktische Lösung, die schnell organisiert und sauber umgesetzt wird.'
       }
     };
 
